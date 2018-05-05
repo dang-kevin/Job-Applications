@@ -1,4 +1,4 @@
-/*CREATE TABLE applications (id INTEGER PRIMARY KEY, organization TEXT, job TEXT, date_applied DATE, response TEXT, interview TEXT);
+CREATE TABLE applications (id INTEGER PRIMARY KEY, organization TEXT, job TEXT, date_applied DATE, response TEXT, interview TEXT);
 
 INSERT INTO applications VALUES (1, 'UofT Central Administration', 'Campus Tour Guide', '2018-02-25', null, null);
 INSERT INTO applications VALUES (2, 'Coinsquare', 'Analyst, Capital Markets', '2018-02-27', null, null);
@@ -91,4 +91,4 @@ INSERT INTO applications VALUES (71, 'UofT Rotman School of Management', 'Resear
 INSERT INTO applications VALUES (72, 'UofT Rotman School of Management', 'Research Analyst (Video Games)', '2018-04-28', null, null);
 INSERT INTO applications VALUES (73, 'UofT Faculty of Arts & Science', 'Stinchcombe Lab Research Assistant', '2018-04-28', null, null);
 INSERT INTO applications VALUES (74, 'UofT Faculty of Medicine', 'Clinical Data Analyst', '2018-04-30', null, null);
-INSERT INTO applications VALUES (75, 'UofT Faculty of Applied Science & Engineering', 'Graduate Database Developer', '2018-04-30', null, null);*/
+INSERT INTO applications VALUES (75, 'UofT Faculty of Applied Science & Engineering', 'Graduate Database Developer', '2018-04-30', null, null);
