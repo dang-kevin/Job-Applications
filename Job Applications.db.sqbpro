@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/kd_ch/OneDrive/Documents/Jobs/Job Applications.db" foreign_keys="1"/><window><current_tab id="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1056"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="applications"/><default_encoding codec=""/><browsetable_info data="AAAAAQAAABgAYQBwAHAAbABpAGMAYQB0AGkAbwBuAHMAAAAAAAAAAAAAAAMAAAAFAAAA6wAAAAMAAAD4AAAAAgAAAOIAAAAAAAAAAAD//////////wAAAAD/////"/></tab_browse><tab_sql><sql name="Job Applications.sql">CREATE TABLE applications (id INTEGER PRIMARY KEY, organization TEXT, job TEXT, date_applied DATE, response TEXT, interview TEXT);
+
+INSERT INTO applications VALUES (1, 'UofT Central Administration', 'Campus Tour Guide', '2018-02-25', null, null);
+INSERT INTO applications VALUES (2, 'Coinsquare', 'Analyst, Capital Markets', '2018-02-27', null, null);
+INSERT INTO applications VALUES (3, 'FSWEP - Government of Canada', 'Various roles', '2018-03-01', null, null );
+INSERT INTO applications VALUES (4, 'LoyaltyOne', 'Technology and Consulting, Analyst', '2018-03-01', null, null);
+INSERT INTO applications VALUES (5, 'Rothmans, Benson &amp; Hedges Inc.', 'Summer Internship - INKOMPASS', '2018-03-02', 'Do online evaluation', 'No');
+INSERT INTO applications VALUES (6, 'MasterCard', 'Summer Internship Program', '2018-03-02', null, null);
+INSERT INTO applications VALUES (7, 'CareerUp', 'Business &amp; Finance Internship', '2018-03-02', 'No Canadian jobs, international only', null);
+INSERT INTO applications VALUES (8, 'Rangle', 'Sales and Marketing Analyst', '2018-03-02', 'Did not move forward', 'No');
+INSERT INTO applications VALUES (9, 'UofT Dept. of Statistical Sciences', 'Research Assistant', '2018-03-04', 'Unsuccessful in moving to next stage', 'No');
+INSERT INTO applications VALUES (10, 'RBC', 'Data Analyst', '2018-03-07', null, null);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
