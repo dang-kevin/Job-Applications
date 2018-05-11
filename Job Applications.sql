@@ -1,7 +1,7 @@
 -- Create a table containing information of all of my job applications
 CREATE TABLE applications (id INTEGER PRIMARY KEY, organization TEXT, job TEXT, date_applied DATE, response TEXT, interview TEXT);
 
--- Insert values into empty table
+-- Insert values into table
 INSERT INTO applications VALUES (1, 'UofT Central Administration', 'Campus Tour Guide', '2018-02-25', null, null);
 INSERT INTO applications VALUES (2, 'Coinsquare', 'Analyst, Capital Markets', '2018-02-27', null, null);
 INSERT INTO applications VALUES (3, 'FSWEP - Government of Canada', 'Various roles', '2018-03-01', null, null );
