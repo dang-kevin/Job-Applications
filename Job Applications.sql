@@ -1,5 +1,12 @@
 -- Create a table containing information of all of my job applications
-CREATE TABLE applications (id INTEGER PRIMARY KEY, organization TEXT, job TEXT, date_applied DATE, response TEXT, interview TEXT);
+CREATE TABLE applications (
+    id INTEGER PRIMARY KEY,
+    organization TEXT,
+    job TEXT,
+    date_applied DATE,
+    response TEXT,
+    interview TEXT
+);
 
 -- Insert values into table
 INSERT INTO applications VALUES (1, 'UofT Central Administration', 'Campus Tour Guide', '2018-02-25', null, null);
@@ -79,40 +86,108 @@ INSERT INTO applications VALUES (74, 'UofT Faculty of Medicine', 'Clinical Data 
 INSERT INTO applications VALUES (75, 'UofT Faculty of Applied Science & Engineering', 'Graduate Database Developer', '2018-04-30', null, null);
 
 -- Update the table: fixing mistakes and adding new information after responses from employers
-UPDATE applications SET organization = 'UofT Department of Statistical Sciences' WHERE id = 9;
-UPDATE applications SET interview = 'No' WHERE id = 22;
-UPDATE applications SET organization = 'UofT IT Services' WHERE id = 23;
-UPDATE applications SET organization = 'UofT Faculty of Applied Science & Engineering' WHERE id = 38;
-UPDATE applications set response = 'Position has been filled' WHERE job = 'Intern, Procurement';
-UPDATE applications set interview = 'No' WHERE job = 'Intern, Procurement';
-UPDATE applications SET job = 'Pulsar Data Analyst' WHERE id = 44;
-UPDATE applications SET organization = 'UofT Faculty of Applied Science & Engineering' WHERE id = 50;
-UPDATE applications SET response = 'Invited to in person interview (I decided to not attend)' WHERE id = 53;
-UPDATE applications SET interview = 'Yes' WHERE id = 53;
+UPDATE applications 
+SET organization = 'UofT Department of Statistical Sciences'
+WHERE id = 9;
+
+UPDATE applications 
+SET interview = 'No'
+WHERE id = 22;
+
+UPDATE applications 
+SET organization = 'UofT IT Services'
+WHERE id = 23;
+
+UPDATE applications 
+SET organization = 'UofT Faculty of Applied Science & Engineering'
+WHERE id = 38;
+
+UPDATE applications 
+SET response = 'Position has been filled'
+WHERE job = 'Intern, Procurement';
+
+UPDATE applications 
+SET interview = 'No'
+WHERE job = 'Intern, Procurement';
+
+UPDATE applications 
+SET job = 'Pulsar Data Analyst'
+WHERE id = 44;
+
+UPDATE applications 
+SET organization = 'UofT Faculty of Applied Science & Engineering'
+WHERE id = 50;
+
+UPDATE applications 
+SET response = 'Invited to in person interview (I declined)'
+WHERE id = 53;
+
+UPDATE applications 
+SET interview = 'Yes'
+WHERE id = 53;
 
 -- Add a column named offer
 ALTER TABLE applications ADD offer TEXT;
 
 -- Continue updating
-UPDATE applications SET offer = 'No' WHERE organization = 'Marsh Canada Limited';
-UPDATE applications SET offer = 'Yes' WHERE job = 'Research Assistant (PhD Life Scientists)';
-UPDATE applications SET response = 'Invited to in person interview (I decided to not attend)' WHERE id = 58;
-UPDATE applications SET response = 'Position was cancelled due to lack of resources' WHERE id = 64;
+UPDATE applications 
+SET offer = 'No'
+WHERE organization = 'Marsh Canada Limited';
 
+UPDATE applications 
+SET offer = 'Yes'
+WHERE job = 'Research Assistant (PhD Life Scientists)';
+
+UPDATE applications 
+SET response = 'Invited to in person interview (I declined)'
+WHERE id = 58;
+
+UPDATE applications 
+SET response = 'Position was cancelled due to lack of resources'
+WHERE id = 64;
+
+UPDATE applications
+SET response = 'Invited to in person interview (I declined)'
+WHERE id = 61;
+
+UPDATE applications
+SET response = 'Invited to in person interview (I declined)'
+WHERE job = 'Sport Data Analyst'
+
+UPDATE applications
+SET offer = 'No'
+WHERE id = 52;
+
+UPDATE applications
+SET offer = 'No'
+WHERE id = 38;
 
 -- Queries
 
--- Display all information for the job with the only offer I received
-SELECT * FROM applications WHERE offer = 'Yes';
+-- Show the one offer I received
+SELECT *
+FROM applications
+WHERE offer = 'Yes';
 
 -- Show the organization, job title, and response for only those which gave a response
-SELECT organization, job, response FROM applications WHERE response IS NOT NULL;
+SELECT organization, job, response
+FROM applications
+WHERE response IS NOT NULL;
 
 -- Count the number of applications at organizations containing 'UofT'
-SELECT COUNT(*) FROM applications WHERE organization LIKE 'UofT%';
+SELECT COUNT(*)
+FROM applications
+WHERE organization LIKE 'UofT%';
 
 -- Show all distinct organizations containing 'UofT' in alphabetical order
-SELECT DISTINCT organization FROM applications WHERE organization LIKE 'UofT%' ORDER BY organization;
+SELECT DISTINCT organization
+FROM applications
+WHERE organization LIKE 'UofT%'
+ORDER BY organization;
 
 -- Show the 10 most recent applications to jobs that involve 'Research'
-SELECT * FROM applications WHERE job LIKE 'Research%' ORDER BY date_applied DESC LIMIT 10;
+SELECT *
+FROM applications
+WHERE job LIKE 'Research%'
+ORDER BY date_applied DESC
+LIMIT 10;
